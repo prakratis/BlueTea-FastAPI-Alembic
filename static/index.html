@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secret Board</title>
+  <link rel="stylesheet" href="/ui/style.css" />
+</head>
+<body>
+
+  <!-- ══ SCATTERED BG STARS ══ -->
+  <div class="bg-stars" aria-hidden="true">
+    <span class="bg-star">★</span>
+    <span class="bg-star">✦</span>
+    <span class="bg-star">★</span>
+    <span class="bg-star">✦</span>
+    <span class="bg-star">★</span>
+    <span class="bg-star">✦</span>
+    <span class="bg-star">★</span>
+    <span class="bg-star">✦</span>
+    <span class="bg-star">★</span>
+    <span class="bg-star">✦</span>
+    <span class="bg-star">★</span>
+    <span class="bg-star">✦</span>
+    <span class="bg-star">★</span>
+    <span class="bg-star">✦</span>
+    <span class="bg-star">★</span>
+  </div>
+
+  <!-- ══ TOP-RIGHT GINGHAM CORNER PATCH ══ -->
+  <div class="corner-patch top-right" aria-hidden="true">
+    <div class="gingham-block"></div>
+    <!-- denim star patches — SVG inline for texture control -->
+    <svg class="denim-star" style="top:14px;right:55px;width:55px;height:55px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="d1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#5a80b0"/>
+          <stop offset="100%" stop-color="#1e3a5f"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="url(#d1)" stroke="#1e3a5f" stroke-width="2"/>
+      <polygon points="50,18 58,40 82,40 63,53 70,77 50,64 30,77 37,53 18,40 42,40" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="3,3"/>
+    </svg>
+    <svg class="denim-star" style="top:55px;right:12px;width:40px;height:40px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="d2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#7a9cc0"/>
+          <stop offset="100%" stop-color="#3a5a8c"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="url(#d2)" stroke="#2a4a7c" stroke-width="2.5"/>
+      <polygon points="50,20 58,40 80,40 64,52 70,74 50,62 30,74 36,52 20,40 42,40" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="2,3"/>
+    </svg>
+    <svg class="denim-star" style="top:78px;right:60px;width:68px;height:68px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="d3" x1="20%" y1="0%" x2="80%" y2="100%">
+          <stop offset="0%" stop-color="#4e72a8"/>
+          <stop offset="100%" stop-color="#1e3a5f"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="url(#d3)" stroke="#162e4e" stroke-width="2"/>
+      <polygon points="50,16 59,38 83,38 65,52 72,76 50,63 28,76 35,52 17,38 41,38" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="3,2"/>
+    </svg>
+    <svg class="denim-star" style="top:138px;right:18px;width:35px;height:35px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c" stroke="#1e3a5f" stroke-width="2.5"/>
+    </svg>
+  </div>
+
+  <!-- ══ BOTTOM-LEFT GINGHAM CORNER PATCH ══ -->
+  <div class="corner-patch bot-left" aria-hidden="true">
+    <div class="gingham-block"></div>
+    <svg class="denim-star" style="bottom:16px;left:62px;width:65px;height:65px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="d4" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#5a80b0"/>
+          <stop offset="100%" stop-color="#1e3a5f"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="url(#d4)" stroke="#1e3a5f" stroke-width="2"/>
+      <polygon points="50,18 58,40 82,40 63,53 70,77 50,64 30,77 37,53 18,40 42,40" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="3,3"/>
+    </svg>
+    <svg class="denim-star" style="bottom:68px;left:12px;width:42px;height:42px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#7a9cc0" stroke="#3a5a8c" stroke-width="2.5"/>
+      <polygon points="50,20 58,40 80,40 64,52 70,74 50,62 30,74 36,52 20,40 42,40" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="2,3"/>
+    </svg>
+    <svg class="denim-star" style="bottom:52px;left:88px;width:48px;height:48px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="d5" x1="20%" y1="0%" x2="80%" y2="100%">
+          <stop offset="0%" stop-color="#4e72a8"/>
+          <stop offset="100%" stop-color="#1e3a5f"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="url(#d5)" stroke="#162e4e" stroke-width="2"/>
+    </svg>
+    <svg class="denim-star" style="bottom:112px;left:26px;width:32px;height:32px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c" stroke="#1e3a5f" stroke-width="3"/>
+    </svg>
+  </div>
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <h1 class="site-title">Secret Board</h1>
+    <p class="site-subtitle">blue notes &amp; denim stars</p>
+  </header>
+
+  <!-- ══ POST FORM ══ -->
+  <section class="post-section">
+    <div class="form-card">
+      <div class="form-clip">
+        <div class="clip-ring"></div>
+        <div class="clip-body">Post a Note</div>
+      </div>
+      <div class="form-gingham-corner"></div>
+      <label class="form-label">write something...</label>
+      <textarea id="msgInput" placeholder="pour your heart out here..."></textarea>
+      <div class="form-row">
+        <input type="text" id="nameInput" placeholder="your name (or stay secret)" />
+        <button class="post-btn" onclick="postNote()">Post ★</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SCALLOPED DIVIDER ══ -->
+  <div class="scallop-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 
+        Q20,20 40,40 Q60,20 80,40 Q100,20 120,40 Q140,20 160,40
+        Q180,20 200,40 Q220,20 240,40 Q260,20 280,40 Q300,20 320,40
+        Q340,20 360,40 Q380,20 400,40 Q420,20 440,40 Q460,20 480,40
+        Q500,20 520,40 Q540,20 560,40 Q580,20 600,40 Q620,20 640,40
+        Q660,20 680,40 Q700,20 720,40 Q740,20 760,40 Q780,20 800,40
+        Q820,20 840,40 Q860,20 880,40 Q900,20 920,40 Q940,20 960,40
+        Q980,20 1000,40 Q1020,20 1040,40 Q1060,20 1080,40 Q1100,20 1120,40
+        Q1140,20 1160,40 Q1180,20 1200,40 Q1220,20 1240,40 Q1260,20 1280,40
+        Q1300,20 1320,40 Q1340,20 1360,40 Q1380,20 1400,40 Q1420,20 1440,40
+        L1440,0 L0,0 Z"
+        fill="rgba(168,192,216,0.35)"/>
+    </svg>
+  </div>
+
+  <!-- ══ BOARD ══ -->
+  <main class="board" id="board">
+
+    <!-- CARD 1: Gingham Corner -->
+    <div class="note card-gingham-corner" style="--rot:-2deg;">
+      <div class="note-inner">
+        <div class="corner-gingham"></div>
+        <!-- denim star patch top-right -->
+        <svg class="star-patch" style="width:46px;height:46px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="cs1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#5a80b0"/><stop offset="100%" stop-color="#1e3a5f"/></linearGradient></defs>
+          <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="url(#cs1)" stroke="#1e3a5f" stroke-width="2"/>
+          <polygon points="50,18 58,40 82,40 63,53 70,77 50,64 30,77 37,53 18,40 42,40" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3,3"/>
+        </svg>
+        <p class="note-text">i hope you find the peace you are looking for.</p>
+        <p class="note-meta"><span class="note-number">01</span> Satin Blue</p>
+      </div>
+    </div>
+
+    <!-- CARD 2: Newspaper Collage -->
+    <div class="note card-newspaper" style="--rot:1.2deg;">
+      <div class="note-inner">
+        <div class="news-block"></div>
+        <div class="news-label">Latest</div>
+        <p class="note-text">growth is quiet but visible. keep going.</p>
+        <p class="note-meta"><span class="note-number">02</span> Daily News</p>
+      </div>
+    </div>
+
+    <!-- CARD 3: Indigo Dashed -->
+    <div class="note card-indigo" style="--rot:2deg;">
+      <div class="note-inner">
+        <!-- pin star -->
+        <svg class="pin-star" style="width:36px;height:36px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="cs2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7a9cc0"/><stop offset="100%" stop-color="#3a5a8c"/></linearGradient></defs>
+          <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="url(#cs2)" stroke="#2a4a7c" stroke-width="2.5"/>
+          <polygon points="50,20 58,40 80,40 64,52 70,74 50,62 30,74 36,52 20,40 42,40" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-dasharray="2,3"/>
+        </svg>
+        <p class="note-text">seeking silence in the static.</p>
+        <p class="note-meta"><span class="note-number">03</span> Indigo</p>
+      </div>
+    </div>
+
+    <!-- CARD 4: Archive Lined Paper -->
+    <div class="note card-archive" style="--rot:-1deg;">
+      <div class="note-inner">
+        <div class="archive-clip">
+          <div class="clip-ring"></div>
+          <div class="clip-body">Archive</div>
+        </div>
+        <div class="wax-seal">✿</div>
+        <!-- small star in corner -->
+        <svg class="corner-star-sm" style="width:26px;height:26px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c" stroke="#1e3a5f" stroke-width="3"/>
+        </svg>
+        <p class="note-text">the stars remember everything you've ever whispered to the sky.</p>
+        <p class="note-meta"><span class="note-number">04</span> Paper Trail</p>
+      </div>
+    </div>
+
+    <!-- CARD 5: Satin Blue -->
+    <div class="note card-satin" style="--rot:1.8deg;">
+      <div class="note-inner">
+        <div class="bookmark"></div>
+        <p class="note-text">soft things still hold the whole world together.</p>
+        <p class="note-meta"><span class="note-number">05</span> Satin Blue</p>
+      </div>
+    </div>
+
+    <!-- CARD 6: Gingham Corner again -->
+    <div class="note card-gingham-corner" style="--rot:-0.8deg;">
+      <div class="note-inner">
+        <div class="corner-gingham"></div>
+        <svg class="star-patch" style="width:38px;height:38px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#4e72a8" stroke="#1e3a5f" stroke-width="2.5"/>
+          <polygon points="50,18 58,40 82,40 63,53 70,77 50,64 30,77 37,53 18,40 42,40" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3,3"/>
+        </svg>
+        <p class="note-text">a little blue never scared me. it made me look up.</p>
+        <p class="note-meta"><span class="note-number">06</span> Satin Blue</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- footer star row -->
+  <div class="star-scatter" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c"/></svg>
+    <svg width="16" height="16" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c"/></svg>
+    <svg width="28" height="28" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c"/></svg>
+    <svg width="16" height="16" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c"/></svg>
+    <svg width="22" height="22" viewBox="0 0 100 100"><polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#3a5a8c"/></svg>
+  </div>
+
+  <script>
+  /* ── star SVG builder ── */
+  function starSVG(w, gradId, c1='#5a80b0', c2='#1e3a5f', stitched=true) {
+    const dashed = stitched
+      ? `<polygon points="50,18 58,40 82,40 63,53 70,77 50,64 30,77 37,53 18,40 42,40"
+           fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" stroke-dasharray="3,3"/>`
+      : '';
+    return `<svg style="width:${w}px;height:${w}px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="${c1}"/><stop offset="100%" stop-color="${c2}"/>
+      </linearGradient></defs>
+      <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
+        fill="url(#${gradId})" stroke="${c2}" stroke-width="2.5"/>
+      ${dashed}
+    </svg>`;
+  }
+
+  const CARD_TYPES = ['card-gingham-corner','card-satin','card-newspaper','card-indigo','card-archive'];
+  let noteCount = 1; // Start counter from 1
+
+  function buildCard(type, text, author) {
+    const n = noteCount++;
+    const num = String(n).padStart(2, '0');
+    const labels = {
+      'card-gingham-corner': 'Satin Blue',
+      'card-satin': 'Satin Blue',
+      'card-newspaper': 'Daily News',
+      'card-indigo': 'Indigo',
+      'card-archive': 'Paper Trail'
+    };
+    const rots = ['-2.2deg','-1deg','0.5deg','1.8deg','2.3deg','1.2deg','-0.6deg'];
+    const rot = rots[Math.floor(Math.random() * rots.length)];
+    const gid = 'g' + Math.random().toString(36).substr(2, 9);
+    const meta = `<p class="note-meta"><span class="note-number">${num}</span> ${author || labels[type]}</p>`;
+
+    let inner = '';
+    if (type === 'card-gingham-corner') {
+      inner = `<div class="note-inner"><div class="corner-gingham"></div><span class="star-patch">${starSVG(44, gid+'a')}</span><p class="note-text">${text}</p>${meta}</div>`;
+    } else if (type === 'card-satin') {
+      inner = `<div class="note-inner"><div class="bookmark"></div><p class="note-text">${text}</p>${meta}</div>`;
+    } else if (type === 'card-newspaper') {
+      inner = `<div class="note-inner"><div class="news-block"></div><div class="news-label">Latest</div><p class="note-text">${text}</p>${meta}</div>`;
+    } else if (type === 'card-indigo') {
+      inner = `<div class="note-inner"><span class="pin-star">${starSVG(34, gid+'b', '#7a9cc0', '#2a4a7c')}</span><p class="note-text">${text}</p>${meta}</div>`;
+    } else if (type === 'card-archive') {
+      inner = `<div class="note-inner"><div class="archive-clip"><div class="clip-ring"></div><div class="clip-body">Archive</div></div><div class="wax-seal">✿</div><span class="corner-star-sm">${starSVG(24, gid+'c', '#3a5a8c', '#1e3a5f', false)}</span><p class="note-text">${text}</p>${meta}</div>`;
+    }
+    return `<div class="note ${type}" style="--rot:${rot}">${inner}</div>`;
+  }
+
+ window.onload = async () => {
+    try {
+        const response = await fetch('/messages');
+        const messages = await response.json();
+        const board = document.getElementById('board');
+
+        // 1. THIS IS THE KEY: Wipe the board clean so hardcoded notes vanish
+        board.innerHTML = ''; 
+
+        // 2. Now fill it only with the permanent notes from secrets.db
+        messages.forEach(msg => {
+            const cardHTML = buildCard(msg.card_type, msg.content, msg.author);
+            board.insertAdjacentHTML('beforeend', cardHTML);
+        });
+    } catch (err) {
+        console.error("Could not load secrets:", err);
+    }
+};
+  // 2. POST TO DATABASE
+  async function postNote() {
+    const msgEl = document.getElementById('msgInput');
+    const nameEl = document.getElementById('nameInput');
+    const board = document.getElementById('board');
+
+    const text = msgEl.value.trim();
+    const author = nameEl.value.trim();
+    if (!text) { msgEl.focus(); return; }
+
+    const type = CARD_TYPES[Math.floor(Math.random() * CARD_TYPES.length)];
+
+    // Send to FastAPI
+    try {
+      const response = await fetch(`/messages?text=${encodeURIComponent(text)}&type=${type}&name=${encodeURIComponent(author)}`, {
+        method: 'POST'
+      });
+
+      if (response.ok) {
+        const savedMsg = await response.json();
+        const cardHTML = buildCard(savedMsg.card_type, savedMsg.content, savedMsg.author);
+        
+        // Add to the top of the board
+        board.insertAdjacentHTML('afterbegin', cardHTML);
+        
+        msgEl.value = '';
+        nameEl.value = '';
+      }
+    } catch (err) {
+      alert("System error: Secret could not be saved.");
+    }
+  }
+
+  document.getElementById('msgInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter' && e.ctrlKey) postNote();
+  });
+</script>
+</body>
+</html>
